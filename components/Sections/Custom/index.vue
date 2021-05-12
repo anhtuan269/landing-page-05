@@ -6,7 +6,7 @@
       :head="head"
       v-show="head.type === 'Who'"
     />
-    <div class="customer-image grid grid-cols-2 gap-5">
+    <div class="customer-image grid grid-cols-2 gap-5 md:grid-cols-3">
       <a
         :href="item.link"
         v-for="(item, index) in custom"

@@ -14,7 +14,7 @@
         SIGN UP NOW
       </button>
     </div>
-    <div class="relative top-n-60 ">
+    <div class="relative top-n-60 md:top-28 ">
       <img src="@/static/image/Pattern.png" alt="" class="z-1 w-full" />
       <img
         src="@/static/image/member.png"

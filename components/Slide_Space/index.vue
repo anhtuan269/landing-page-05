@@ -1,7 +1,7 @@
 <template>
   <div class="item h-n-600">
     <div class="image">
-      <img :src="item.url" alt="" class="w-400 h-n-350 duration-200" />
+      <img :src="item.url" alt="" class="w-400 h-n-350 duration-200 md:w-330" />
     </div>
   </div>
 </template>

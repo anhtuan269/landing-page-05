@@ -1,5 +1,5 @@
 <template>
-  <div class="heading my-10">
+  <div class="heading ">
     <div class="flex items-center justify-between">
       <div class="logo" v-for="(item, index) in logo" :key="index">
         <nuxt-link :to="item.link">

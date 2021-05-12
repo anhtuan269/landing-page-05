@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="bg-gray-100">
-    <Header  class="px-10"/>
+    <Header  class="px-10 pt-10 mb-10"/>
     <Hero  class="px-10"/>
     <Space  class="px-10"/>
     <Count  class="px-10"/>

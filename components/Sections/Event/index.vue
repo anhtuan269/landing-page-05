@@ -24,40 +24,54 @@
         </svg>
       </div>
     </div>
-    <div class="content" v-for="(item,index) in event" :key="index ">
-        <ImageCard :item="item" v-show="item.type==='image'" />
-        <ImageTestimonial :item="item" v-show="item.type==='testimonial'" />
-        <ImageEvent :item="item" v-show="item.type==='space'" />
+    <div class="content md:grid grid-cols-2">
+      <ImageCard
+        :item="item"
+        v-for="(item, index) in event"
+        :key="index"
+        v-show="item.type === 'image'"
+      />
+      <ImageTestimonial
+        :item="item"
+        v-for="(item, index) in event"
+        :key="index"
+        v-show="item.type === 'testimonial'"
+      />
+      <ImageEvent
+        v-for="(item, index) in event"
+        :key="index"
+        :item="item"
+        v-show="item.type === 'space'"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import Heading from "@/components/Heading";
-import ImageCard from '@/components/Card_event'
-import ImageTestimonial from '@/components/Card_testimonial'
-import ImageEvent from "@/components/Card_image"
+import ImageCard from "@/components/Card_event";
+import ImageTestimonial from "@/components/Card_testimonial";
+import ImageEvent from "@/components/Card_image";
 export default {
   components: {
     Heading,
     ImageCard,
     ImageTestimonial,
-    ImageEvent
+    ImageEvent,
   },
   data() {
     return {
       heading: [],
-      event:[]
+      event: [],
     };
   },
   async fetch() {
     this.heading = await fetch("http://localhost:3000/heading").then((res) => {
       return res.json();
     });
-     this.event = await fetch("http://localhost:3000/event").then((res) => {
+    this.event = await fetch("http://localhost:3000/event").then((res) => {
       return res.json();
     });
-
   },
 };
 </script>
