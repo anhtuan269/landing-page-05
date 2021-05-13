@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <div class="image group relative cursor-pointer h-n-470 w-400 md:w-330 xl:w-340">
+    <div class="image group relative cursor-pointer h-n-470 w-400 md:w-330 xl:w-340 acer:w-400 2xl:w-460" >
       <img
         class="w-full group-hover:opacity-0 group-hover:absolute duration-500 ease-linear z-a h-n-420"
         :src="item.url"

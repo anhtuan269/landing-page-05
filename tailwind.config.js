@@ -2,6 +2,13 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'md':'768px',
+      'lg':'1024px',
+      'xl':'1280px',
+      'acer': '1360px',
+      '2xl':'1536px'
+    },
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui',],
       'serif': ['ui-serif', 'Georgia', ],
@@ -51,7 +58,9 @@ module.exports = {
         '610': '610px',
         '670': '670px',
         '680': '680px',
-        '900':"900px"
+        '900':"900px",
+        "1100":'1110px',
+        "1280":'1280px'
         
       },
       maxWidth: {
@@ -59,11 +68,11 @@ module.exports = {
         "330":"330px",
         "350":"350px",
         "380":"380px",
+        '460': '460px',
         '1110':'1110px',
-        '1200':'1220px'
-      },
-      screens: {
-        '1360': '1360px',
+        '1200':'1220px',
+        "1300":"1300px",
+        "1500":"1500px",
       },
       fontSize: {
         '12': '0.75rem',

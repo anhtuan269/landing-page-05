@@ -1,5 +1,5 @@
 <template>
-  <div class="custom mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28">
+  <div class="custom mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28 acer:max-w-1300 2xl:max-w-1500">
    <div class="lg:text-center mx-auto">
       <Heading
       v-for="(head, index) in heading"

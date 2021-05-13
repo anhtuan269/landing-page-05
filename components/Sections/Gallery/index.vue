@@ -1,6 +1,6 @@
 <template>
-  <div class="gallery mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 relative">
-    <div class="head xl:max-w-xl xl:ml-auto  xl:absolute xl:top-0 xl:z-10 xl:right-1/4 ">
+  <div class="gallery mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 xl:relative acer:max-w-1300 2xl:max-w-1500">
+    <div class="head xl:max-w-xl xl:ml-auto  xl:absolute xl:top-0 xl:z-10 xl:right-1/4 acer:right-1/3 2xl:right-2/4 xl:transform xl:-translate-x-24 acer:-translate-x-14 2xl:translate-x-32 ">
       <div
         class="heading ml-auto"
         v-for="(head, index) in heading"
@@ -11,7 +11,7 @@
         <Heading :head="head" :width="width" />
       </div>
       <Arrow
-        class="hidden xl:flex xl:justify-start"
+        class="hidden md:flex xl:justify-start "
         @next="showNext"
         @prev="showPrev"
       />

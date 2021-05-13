@@ -1,5 +1,5 @@
 <template>
-  <div class="category mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110">
+  <div class="category mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 acer:max-w-1300 2xl:max-w-1500">
     <div
       class="heading"
       v-for="(head, index) in heading"
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="xl:w-8/12 xl:transform xl:-translate-x-24">
-      <img src="@/static/image/customer.png" alt="" /></div>
+      <img src="@/static/image/customer.png" alt="" class="acer:w-full"/></div>
     </div>
   </div>
 </template>

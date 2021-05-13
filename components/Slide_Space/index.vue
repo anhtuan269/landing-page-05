@@ -1,7 +1,7 @@
 <template>
   <div class="item h-n-600 xl:relative">
     <div class="image mt-auto">
-      <img :src="item.url" alt="" class="w-400 h-n-350 duration-200 md:w-330 xl:absolute xl:bottom-0" />
+      <img :src="item.url" alt="" class="w-400 h-n-350 duration-200 md:w-330 xl:absolute xl:bottom-0 acer:w-400 2xl:w-460" />
     </div>
   </div>
 </template>

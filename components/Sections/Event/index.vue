@@ -1,5 +1,5 @@
 <template>
-  <div class="news max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-20">
+  <div class="news max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-20 acer:max-w-1300 2xl:max-w-1500">
     <div class="xl:flex justify-between">
       <Heading
         v-for="(head, index) in heading"

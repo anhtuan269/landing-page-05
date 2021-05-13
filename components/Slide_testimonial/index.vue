@@ -1,5 +1,5 @@
 <template>
-<div class=" bg-blue-01 p-10  max-w-400 text-white h-n-400 relative font-Lato md:max-w-330 xl:max-w-380">
+<div class=" bg-blue-01 p-10  max-w-400 text-white h-n-400 relative font-Lato md:max-w-330 xl:max-w-380 acer:max-w-400 2xl:max-w-460">
     <div class="content">
         <p class="text-16 leading-7">{{item.review}}</p>
     </div>

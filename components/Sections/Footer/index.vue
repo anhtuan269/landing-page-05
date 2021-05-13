@@ -1,6 +1,6 @@
 <template>
   <div class="bg-blue-02 pt-10 ">
-    <div class="max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:flex xl:justify-between xl:items-center">
+    <div class="max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:flex xl:justify-between xl:items-center acer:max-w-1300 2xl:max-w-1500">
       <div class="head xl:w-3/12">
       <Heading
         v-for="(head, index) in heading"

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero my-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28">
+  <div class="hero my-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28 acer:max-w-1300 2xl:max-w-1500 overflow-x-hidden">
     <div
       class="heading"
       v-for="(head, index) in heading"
@@ -10,16 +10,16 @@
       <Heading :head="head" :flex="flex" :width="width" />
     </div>
     <div class="relative xl:flex xl:justify-end">
-      <div class="xl:absolute xl:left-0 xl:top-1/3 xl:transform xl:-translate-y-1/4 z-10">
+      <div class="xl:absolute xl:left-0 xl:top-1/3 xl:transform xl:-translate-y-1/4 z-10 ">
         <Form />
       </div>
       <div
-        class="image xl:transform xl:translate-x-20 "
+        class="image xl:transform xl:translate-x-20  "
         v-for="(item, index) in image"
         :key="index"
         v-show="item.type === 'hero'"
       >
-        <img :src="item.url" alt="" class=" w-900"/>
+        <img :src="item.url" alt="" class=" w-900 acer:w-1100 2xl:w-1280  "/>
       </div>
     </div>
   </div>

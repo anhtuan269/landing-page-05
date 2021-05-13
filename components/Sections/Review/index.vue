@@ -1,5 +1,5 @@
 <template>
-  <div class="review mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1200 xl:mb-28">
+  <div class="review mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1200 xl:mb-28 acer:max-w-1300 2xl:max-w-1500 ">
     <Name
       v-for="(head, index) in heading"
       :key="index"

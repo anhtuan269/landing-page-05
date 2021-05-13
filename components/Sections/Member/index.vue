@@ -1,7 +1,7 @@
 <template>
   <div class="member bg-blue-01">
     <div
-      class="max-w-400 mx-auto xl:flex items-center overflow-y-hidden md:max-w-2xl xl:max-w-1110 xl:justify-between"
+      class="max-w-400 mx-auto xl:flex items-center overflow-y-hidden md:max-w-2xl xl:max-w-1110 xl:justify-between acer:max-w-1300 2xl:max-w-1500"
     >
       <div
         class="head mb-20 xl:mb-0 xl:w-4/12"

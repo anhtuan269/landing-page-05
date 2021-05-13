@@ -1,5 +1,5 @@
 <template>
-  <div class="heading justify-between mb-10" :class="[flexClass]">
+  <div class="heading justify-between  mb-10" :class="[flexClass]">
     <h2
       class="text-34 font-bold leading-9 mb-8"
       :class="[textColor, headWidth, headSize, leading, margin]"
@@ -38,7 +38,7 @@ export default {
   computed: {
     leading() {
       if (this.width === "hero") {
-        return "xl:leading-l-67";
+        return "xl:leading-l-67 ";
       } else {
         return "xl:leading-10";
       }
@@ -52,7 +52,7 @@ export default {
     },
     headWidth() {
       if (this.width === "hero") {
-        return " xl:w-670";
+        return " xl:w-670 ";
       } else if (this.width === "category") {
         return " xl:w-460";
       } else if (this.width === "gallery") {
@@ -67,7 +67,7 @@ export default {
     },
     textWidth() {
       if (this.width === "hero") {
-        return " xl:w-380";
+        return " xl:w-380 acer:w-460";
       } else if (this.width === "space") {
         return " xl:w-475";
       } else {
@@ -92,7 +92,7 @@ export default {
     },
     flexClass() {
       if (this.flex === "true") {
-        return "xl:flex";
+        return "xl:flex  ";
       } else {
         return "block";
       }

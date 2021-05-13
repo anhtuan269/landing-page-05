@@ -1,12 +1,12 @@
 <template>
   <div
-    class="counting mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 xl:flex xl:justify-between xl:items-center xl:mb-28 "
+    class="counting mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 xl:flex xl:justify-between xl:items-center xl:mb-28 acer:max-w-1300 2xl:max-w-1500 "
   >
     <div class="xl:w-5/12">
       <Count />
     </div>
 
-    <div class="content bg-blue-01 text-white p-10 xl:w-6/12">
+    <div class="content bg-blue-01 text-white p-10 xl:w-6/12 2xl:w-7/12">
       <Name
         v-for="(head, index) in heading"
         :key="index"

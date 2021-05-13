@@ -1,9 +1,9 @@
 <template>
   <div
-    class="space mb-20 my-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:md-28 "
+    class="space mb-20 my-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:md-28 acer:max-w-1300 2xl:max-w-1500"
   >
     <div class="heading flex items-center justify-between">
-      <div class="w-9/12">
+      <div class="w-9/12 acer:w-8/12">
         <Heading
           v-for="(head, index) in heading"
           :key="index"

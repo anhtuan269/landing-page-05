@@ -1,5 +1,5 @@
 <template>
-  <div class="header max-w-400 pt-10 mx-auto md:max-w-2xl xl:max-w-1110 ">
+  <div class="header max-w-400 pt-10 mx-auto md:max-w-2xl xl:max-w-1110 acer:max-w-1300 2xl:max-w-1500">
     <div class="flex items-center justify-between">
       <div class="logo" v-for="(item, index) in logo" :key="index">
         <nuxt-link :to="item.link">
@@ -12,7 +12,7 @@
           v-for="(item, index) in login"
           :key="index"
           v-show="item.type === 'login'"
-          class="text-orange font-bold text-16 bg-white py-2 font-Lato px-6 hover:text-white hover:bg-orange duration-500 ease-linear focus:outline-none "
+          class="text-orange font-bold text-16 bg-gray-100 py-2 font-Lato px-6 hover:text-white hover:bg-orange duration-500 ease-linear focus:outline-none "
         >
           {{ item.text }}
         </button>
