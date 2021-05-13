@@ -1,14 +1,23 @@
 <template>
-  <div class="space mx-auto mb-20">
+  <div
+    class="space mb-20 my-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:md-28 "
+  >
     <div class="heading flex items-center justify-between">
-      <Heading
-        v-for="(head, index) in heading"
-        :key="index"
-        v-show="head.type === 'space'"
-        :head="head"
-        :flex="flex"
+      <div class="w-9/12">
+        <Heading
+          v-for="(head, index) in heading"
+          :key="index"
+          v-show="head.type === 'space'"
+          :head="head"
+          :flex="flex"
+          :width="width"
+        />
+      </div>
+      <Arrow
+        class="hidden text-center xl:flex xl:mb-20 xl:transform xl:-translate-x-10"
+        @next="showNext"
+        @prev="showPrev"
       />
-      <Arrow class="hidden text-center" @next="showNext" @prev="showPrev" />
     </div>
     <div class="slide">
       <VueSlickCarousel v-bind="settings" ref="carousel">
@@ -17,7 +26,7 @@
         </div>
       </VueSlickCarousel>
       <div
-        class="bg-gray-02 w-160 h-1 mx-auto mb-3 flex items-center duration-500 ease-linear"
+        class="bg-gray-02 w-160 h-1 mx-auto mb-3 mt-10 flex items-center duration-500 ease-linear"
       >
         <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange1"></div>
         <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange2"></div>
@@ -29,7 +38,7 @@
         <span class="text-16 leading-6 text-black-02">/</span>
         <span class="text-18 leading-6 text-gray-02">0{{ total }}</span>
       </div>
-      <Arrow class="mt-0" @next="showNext" @prev="showPrev" />
+      <Arrow class="mt-0 xl:hidden" @next="showNext" @prev="showPrev" />
     </div>
   </div>
 </template>
@@ -61,6 +70,7 @@ export default {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        centerPadding: "10px",
         responsive: [
           {
             breakpoint: 480,
@@ -84,8 +94,10 @@ export default {
             breakpoint: 1200,
             settings: {
               slidesToShow: 3,
+              centerPadding: "20px",
               slidesToScroll: 1,
               infinite: true,
+              centerMode: true,
               dots: false,
             },
           },
@@ -93,6 +105,7 @@ export default {
       },
       flex: "true",
       index: 1,
+      width:"space"
     };
   },
   async fetch() {

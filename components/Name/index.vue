@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center my-2 font-Lato">
-    <p class="font-medium text-18">{{ head.name }}</p>
+    <p class="font-medium text-18 xl:text-20">{{ head.name }}</p>
     <span
       class="w-20 h-n-1 ml-3 relative top-n-1"
       :class="backgroundColor"

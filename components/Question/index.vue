@@ -1,6 +1,6 @@
 <template>
   <div class="question group">
-    <div class="card bg-white relative p-10 text-center w-full h-n-160 mb-14 group-hover:bg-orange duration-500 ease-in-out shadow-2xl">
+    <div class="card bg-white relative p-10 text-center w-full h-n-160 mb-14 group-hover:bg-orange duration-500 ease-in-out shadow-2xl xl:w-350">
       <p class="text-20 leading-7 group-hover:text-white duration-500 ease-in-out ">{{ item.text }}</p>
       <div class=" p-4 bg-orange absolute -bottom-0 left-2/4 transform -translate-x-2/4 translate-y-5 shadow-2xl group-hover:opacity-0 duration-500 ease-in-out">
           <svg

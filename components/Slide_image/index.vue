@@ -1,11 +1,12 @@
 <template>
   <div class="item">
-    <div class="image group relative cursor-pointer h-n-470 w-400 md:w-330">
+    <div class="image group relative cursor-pointer h-n-470 w-400 md:w-330 xl:w-340">
       <img
         class="w-full group-hover:opacity-0 group-hover:absolute duration-500 ease-linear z-a h-n-420"
         :src="item.url"
         alt=""
       />
+      <p class="text-20 font-bold font-Lato text-black-01 mt-5 text-center">{{item.name}}</p>
 
       <img
         :src="item.hover"

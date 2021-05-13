@@ -1,6 +1,6 @@
 <template>
-  <div class="news">
-    <div class="lg:flex justify-between">
+  <div class="news max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-20">
+    <div class="xl:flex justify-between">
       <Heading
         v-for="(head, index) in heading"
         :key="index"
@@ -8,7 +8,7 @@
         v-show="head.type === 'News'"
       />
       <div class="flex items-center my-4">
-        <p class="text-orange text-16">See more</p>
+        <p class="text-orange text-16 cursor-pointer">See more</p>
         <svg
           class="transform -rotate-90 ml-3"
           width="12"
@@ -24,7 +24,7 @@
         </svg>
       </div>
     </div>
-    <div class="content md:grid grid-cols-2">
+    <div class="content md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-5">
       <ImageCard
         :item="item"
         v-for="(item, index) in event"

@@ -1,12 +1,16 @@
 <template>
-  <div class="help-center mb-20">
-    <Heading
+  <div class="help-center mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28">
+   <div class="xl:text-center xl:mb-20">
+      <Heading
       v-for="(head, index) in heading"
       :key="index"
       :head="head"
       v-show="head.type === 'question'"
+      :width="width"
+      :flex="flex"
     />
-   <div class="center mb-10">
+   </div>
+   <div class="center mb-10 xl:grid xl:grid-cols-3 xl:items-center xl:gap-4 xl:mb-0">
       <Question
       v-for="(item, index) in question"
       :key="index"
@@ -19,7 +23,7 @@
       :key="index"
       :item="item"
       v-show="item.type === 'link'"
-      class="mt-10"
+      class="mt-10 xl:mt-5"
     >
       <nuxt-link to="/" class="flex text-orange justify-center ">
         {{ item.text }}
@@ -53,6 +57,8 @@ export default {
     return {
       heading: [],
       question: [],
+      width:"help",
+      flex:"false"
     };
   },
   async fetch() {

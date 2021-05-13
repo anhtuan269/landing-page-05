@@ -1,18 +1,21 @@
 <template>
-  <div class="review mb-20">
+  <div class="review mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1200 xl:mb-28">
     <Name
       v-for="(head, index) in heading"
       :key="index"
       :head="head"
       v-show="head.type === 'Reviews'"
     />
-    <Heading
-      v-for="(head, index) in heading"
-      :key="index"
-      :head="head"
-      v-show="head.type === 'Reviews'"
-    />
-    <Arrow class="mb-10 " @next="showNext" @prev="showPrev" />
+    <div class="xl:flex xl:justify-between">
+      <Heading
+        v-for="(head, index) in heading"
+        :key="index"
+        :head="head"
+        v-show="head.type === 'Reviews'"
+        :width="width"
+      />
+      <Arrow class="mb-10 xl:mb-0 xl:transform xl:-translate-x-10" @next="showNext" @prev="showPrev" />
+    </div>
     <VueSlickCarousel v-bind="setting" ref="carousel">
       <Slide
         v-for="(item, index) in slide"
@@ -22,13 +25,13 @@
       />
     </VueSlickCarousel>
     <div
-        class="bg-gray-02 w-160 h-1 mx-auto mt-5 flex items-center duration-500 ease-linear"
-      >
-        <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange1"></div>
-        <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange2"></div>
-        <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange3"></div>
-        <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange4"></div>
-      </div>
+      class="bg-gray-02 w-160 h-1 mx-auto mt-10 flex items-center duration-500 ease-linear"
+    >
+      <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange1"></div>
+      <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange2"></div>
+      <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange3"></div>
+      <div class="w-1/4 h-1 duration-300 ease-linear" :class="orange4"></div>
+    </div>
   </div>
 </template>
 
@@ -47,7 +50,8 @@ export default {
     return {
       heading: [],
       slide: [],
-      index:1,
+      index: 1,
+      width: "review",
       setting: {
         dots: false,
         edgeFriction: 0.35,
@@ -124,7 +128,7 @@ export default {
   },
   computed: {
     total() {
-      return this.slide.length
+      return this.slide.length;
     },
     orange1() {
       if (this.index === 1) {
@@ -154,7 +158,7 @@ export default {
         return "";
       }
     },
-  }
+  },
 };
 </script>
 

@@ -1,12 +1,14 @@
 <template>
-  <div class="custom mb-20">
-    <Heading
+  <div class="custom mb-20 max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:mb-28">
+   <div class="lg:text-center mx-auto">
+      <Heading
       v-for="(head, index) in heading"
       :key="index"
       :head="head"
       v-show="head.type === 'Who'"
     />
-    <div class="customer-image grid grid-cols-2 gap-5 md:grid-cols-3">
+   </div>
+    <div class="customer-image grid grid-cols-2 items-center gap-5 md:grid-cols-3 xl:grid-cols-6 ">
       <a
         :href="item.link"
         v-for="(item, index) in custom"
@@ -26,6 +28,7 @@ export default {
     return {
       heading: [],
       custom: [],
+     
     };
   },
   components: {

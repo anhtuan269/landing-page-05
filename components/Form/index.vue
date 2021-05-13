@@ -1,12 +1,12 @@
 <template>
   <div class="block">
-    <div class="form w-440 bg-blue-01 text-white p-10 mb-10">
+    <div class="form  bg-blue-01 text-white p-10 mb-10 xl:w-440 ">
       <form action="">
         <h3
           v-for="(item, index) in form"
           :key="index"
           v-show="item.type === 'title'"
-          class="text-28 font-bold leading-8 mb-5"
+          class="text-28 font-bold leading-8 mb-5 xl:text-34"
         >
           {{ item.title }}
         </h3>

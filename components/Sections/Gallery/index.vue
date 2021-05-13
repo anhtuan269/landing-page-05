@@ -1,22 +1,28 @@
 <template>
-  <div class="gallery mb-20">
-    <div
-      class="heading"
-      v-for="(head, index) in heading"
-      :key="index"
-      v-show="head.type === 'gallery'"
-    >
-      <Name :head="head" />
-      <Heading :head="head" />
+  <div class="gallery mb-20 mx-auto max-w-400 md:max-w-2xl xl:max-w-1110 relative">
+    <div class="head xl:max-w-xl xl:ml-auto  xl:absolute xl:top-0 xl:z-10 xl:right-1/4 ">
+      <div
+        class="heading ml-auto"
+        v-for="(head, index) in heading"
+        :key="index"
+        v-show="head.type === 'gallery'"
+      >
+        <Name :head="head" />
+        <Heading :head="head" :width="width" />
+      </div>
+      <Arrow
+        class="hidden xl:flex xl:justify-start"
+        @next="showNext"
+        @prev="showPrev"
+      />
     </div>
-    <Arrow class="hidden" @next="showNext" @prev="showPrev" />
-    <div class="slide">
+    <div class="slide ">
       <VueSlickCarousel v-bind="settings" ref="carousel">
         <div class="slide relative" v-for="(item, index) in slide" :key="index">
           <Slide :item="item" :index="index" />
         </div>
       </VueSlickCarousel>
-      <Arrow class="mt-10" @next="showNext" @prev="showPrev" />
+      <Arrow class="mt-10 xl:hidden" @next="showNext" @prev="showPrev" />
     </div>
   </div>
 </template>
@@ -43,6 +49,7 @@ export default {
     return {
       heading: [],
       slide: [],
+      width: "gallery",
       settings: {
         dots: false,
         edgeFriction: 0.35,
@@ -73,6 +80,7 @@ export default {
             breakpoint: 1200,
             settings: {
               slidesToShow: 3,
+              centerMode: true,
               slidesToScroll: 1,
               infinite: true,
               dots: false,
@@ -105,6 +113,6 @@ export default {
 
 <style scoped>
 .slick-slide.slick-active.slick-current img {
-  height:600px;
+  height: 600px;
 }
 </style>

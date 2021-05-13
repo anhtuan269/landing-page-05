@@ -1,7 +1,7 @@
 <template>
   <div class="event mb-10 bg-white">
       <div class="card">
-          <img :src="item.url" alt="" class="w-400 md:w-330">
+          <img :src="item.url" alt="" class="w-400 md:w-330 xl:w-full">
       </div>
   </div>
 </template>

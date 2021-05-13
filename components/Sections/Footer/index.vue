@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-blue-02 p-10 ">
-    <div class="head">
+  <div class="bg-blue-02 pt-10 ">
+    <div class="max-w-400 mx-auto md:max-w-2xl xl:max-w-1110 xl:flex xl:justify-between xl:items-center">
+      <div class="head xl:w-3/12">
       <Heading
         v-for="(head, index) in heading"
         :key="index"
@@ -104,7 +105,7 @@
       </div>
     </div>
 
-    <div class="content text-white text-center md:flex md:justify-between md:text-left" >
+    <div class="content text-white text-center md:flex md:justify-between md:text-left xl:w-8/12" >
       <div class="col w-1/4 mb-10">
         <Title
           class="menu"
@@ -165,6 +166,7 @@
           v-show="item.type === 'Contact'"
         />
       </div>
+    </div>
     </div>
   </div>
 </template>
